@@ -95,29 +95,26 @@ if [ -z $NEW ]; then
   fi
   ui_print " "
   ui_print "- Select Option -"
-  ui_print "  Choose which option CPU Clock you want: "
-  ui_print "  + Volume Up = OC 2.2 GHz "
-  ui_print "  - Volume Down = Non OC 1.8 GHz "
+  ui_print "  Choose which option Cam Libs you want: "
+  ui_print "  + Volume Up = New Cam "
+  ui_print "  - Volume Down = Old Cam "
   if $FUNCTION; then
     NEW=true
   else
     NEW=false
   fi
 else
-  ui_print "   Option specified in zipname!"
+  ui_print "   Will Install Old Cam. If error reflash this kernel, and choose NewCam"
 fi
 
 ## AnyKernel install
 dump_boot;
 
-# If the kernel image and dtbs are separated in the zip
-decompressed_image=/tmp/anykernel/kernel/Image
-compressed_image=$decompressed_image.gz
   # Concatenate all of the dtbs to the kernel
   if $NEW; then
-    cat $compressed_image /tmp/anykernel/dtbs/*.dtb-oc > /tmp/anykernel/Image.gz-dtb;
+    mv /tmp/anykernel/newcam/Image.gz-dtb /tmp/anykernel/Image.gz-dtb;
   else
-    cat $compressed_image /tmp/anykernel/dtbs/*.dtb-uc > /tmp/anykernel/Image.gz-dtb;
+    mv /tmp/anykernel/oldcam/Image.gz-dtb /tmp/anykernel/Image.gz-dtb;
   fi
 
 write_boot;
