@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=kang Kernel
+kernel.string=SiLonT Kernel by @eve_enryu on Telegram
 do.devicecheck=1
 do.modules=0
 do.systemless=1
