@@ -28,27 +28,8 @@ ramdisk_compression=auto;
 # import patching functions/variables - see for reference
 . tools/ak3-core.sh;
 
-
-## AnyKernel file attributes
-# set permissions/ownership for included ramdisk files
-chmod -R 750 $ramdisk/*;
-chown -R root:root $ramdisk/*;
-
-
 ## AnyKernel install
 dump_boot;
-
-# begin ramdisk changes
-
-# Set Android version for kernel
-ver="$(file_getprop /system/build.prop ro.build.version.release)"
-if [ ! -z "$ver" ]; then
-  patch_cmdline "androidboot.version" "androidboot.version=$ver"
-else
-  patch_cmdline "androidboot.version" ""
-fi
-
-# end ramdisk changes
 
 write_boot;
 ## end install
