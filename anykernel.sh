@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Mi8937 Kernel 4.9
+kernel.string=SiLonT Santoni
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -20,7 +20,7 @@ device.name7=santoni
 device.name8=ugg
 device.name9=ugglite
 device.name10=ulysse
-supported.versions=8.1.0 - 11
+supported.versions=10 - 11
 supported.patchlevels=
 '; } # end properties
 
