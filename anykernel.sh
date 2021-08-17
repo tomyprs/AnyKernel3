@@ -4,18 +4,18 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=SiLonT Kernel by @eve_enryu on Telegram
+kernel.string=•Bionic Kernel• Pure Kernel Beyond the scope.
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=whyred
-device.name2=redmi note 5 pro
+device.name1=lavender
+device.name2=redmi note 7
 device.name3=
 device.name4=
 device.name5=
-supported.versions=
+supported.versions=10 - 12
 '; } # end properties
 
 # shell variables
